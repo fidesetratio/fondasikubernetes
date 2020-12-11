@@ -1,0 +1,12 @@
+kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.9.3/manifests/namespace.yaml
+kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.9.3/manifests/metallb.yaml
+kubectl create secret generic -n metallb-system memberlist --from-literal=secretkey="$(openssl rand -base64 128)"
+128.21.33.59 - 128.21.33.100
+kubectl describe config configmap namelb
+kubectl expose deploy nginx-test --port=80 --type LoadBalancer
+
+
+
+Note :
+Ingat 128.21.33.59 - 128.21.33.100 adalah ip network yang kosong dan masih bisa di daftar otomatis di dns jaringan 
+kita, jika tidak terpaksa pake ip vm ya.

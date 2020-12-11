@@ -1,0 +1,45 @@
+Jenkins 
+http://128.21.33.43:8080/
+username : admin
+password : admin
+
+Kibana (efk)
+http://128.21.33.62:5601/
+
+Portainer 
+
+Spring Boot
+-- Simple Kube Spring Boot
+ simplekube test namspace cosmos
+ http://128.21.33.61:9697/
+ simplekube test namspace cosmos
+ http://128.21.33.61:9697/
+
+
+Jenkins 
+http://128.21.33.43:8080/
+username : admin
+password : admin
+
+
+Prometheous & Grafana
+admin
+prom-operator
+http://128.21.33.45:30629/
+http://128.21.33.45:30629/login
+
+Spring Boot
+-- Simple Kube Spring Boot
+ simplekube test namspace cosmos
+ http://128.21.33.61:9697/
+ simplekube test namspace cosmos
+ http://128.21.33.61:9697/
+
+
+Gitlab
+http://128.21.33.43:8888/users/sign_in
+username : root
+password : Ajsjava12345!
+
+username : patartimotiustambunan
+password : evievi123

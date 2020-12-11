@@ -1,0 +1,24 @@
+helm inspect values stable/prometheus-operator > /tmp/prometheus.values
+vim /tmp/prometheus.values
+
+kubectl get MutatingWebhookConfiguration
+kubectl delete MutatingWebhookConfiguration metrics1-prometheus-operat-admission  prom-prometheus-operator-admission
+kubectl get validatingwebhookconfigurations.admissionregistration.k8s.io
+kubectl delete validatingwebhookconfigurations.admissionregistration.k8s.io metrics1-prometheus-operat-admission
+
+
+
+
+helm install prom stable/prometheus-operator -n monitoring --values /tmp/prometheus.values \
+--set prometheusOperator.admissionWebhooks.enabled=false \
+--set prometheusOperator.admissionWebhooks.patch.enabled=false \
+--set prometheusOperator.tlsProxy.enabled=false \
+
+ helm install prometheus stable/prometheus --values /tmp/prometheus.values --namespace prometheus
+
+
+admin
+prom-operator
+http://128.21.33.45:30629/
+
+http://128.21.33.45:30629/login

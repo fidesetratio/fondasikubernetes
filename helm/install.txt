@@ -1,0 +1,9 @@
+
+mkdir helm
+cd helm
+curl -O https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+chmod 755 get-helm-3
+./get-helm-3
+helm version
+
+helm repo add https://kubernetes-charts.storage.googleapis.com
